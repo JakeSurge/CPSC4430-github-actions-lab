@@ -17,26 +17,69 @@ def home():
 # Get request for adding
 @app.route("/add")
 def add():
-    num1 = int(request.args.get("num1"))
-    num2 = int(request.args.get("num2"))
+    page = """
+    <h1>Add</h1>
+    <form action=/add method=get>
+        <input name=a />
+        <input name=b />
+        <input type=submit />
+    </form>
+    <a href="/">Home</a>
+    """
 
-    return f"<p>{num1 + num2}</p>"
+    try:
+        a = int(request.args["a"])
+        b = int(request.args["b"])
+        page += f"<p>The sum is {a+b}</p>"
+    except:
+        pass
+
+    return page
 
 # Get request for subtracting
 @app.route("/subtract")
 def subtract():
-    num1 = int(request.args.get("num1"))
-    num2 = int(request.args.get("num2"))
+    page = """
+    <h1>Subtract</h1>
+    <form action=/subtract method=get>
+        <input name=a />
+        <input name=b />
+        <input type=submit />
+    </form>
+    <a href="/">Home</a>
+    """
 
-    return f"<p>{num1 - num2}</p>"
+    try:
+        a = int(request.args["a"])
+        b = int(request.args["b"])
+        page += f"<p>The difference is {a-b}</p>"
+    except:
+        pass
+
+    return page
 
 # Get request for multiplying
 @app.route("/multiply")
 def multiply():
-    num1 = int(request.args.get("num1"))
-    num2 = int(request.args.get("num2"))
+    page = """
+    <h1>Multiply</h1>
+    <form action=/multiply method=get>
+        <input name=a />
+        <input name=b />
+        <input type=submit />
+    </form>
+    <a href="/">Home</a>
+    """
 
-    return f"<p>{num1 * num2}</p>"
+    try:
+        a = int(request.args["a"])
+        b = int(request.args["b"])
+        page += f"<p>The product is {a*b}</p>"
+    except:
+        pass
+
+    return page
+
 
 if __name__ == "__main__":
     app.run()
