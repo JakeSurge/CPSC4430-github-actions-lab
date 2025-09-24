@@ -2,6 +2,18 @@ from flask import Flask, request
 
 app = Flask(__name__)
 
+# Home route for linking pages
+@app.route("/")
+def home():
+    return """
+    <h1>Best Calculator Site Ever</h1>
+    <div>
+        <a href="/add">Add</a>
+        <a href="/subtract">Subtract</a>
+        <a href="/multiply">Multiply</a>
+    </div>
+    """
+
 # Get request for adding
 @app.route("/add")
 def add():
