@@ -1,5 +1,7 @@
 # Calculator Flask App
 
+[![Test](https://github.com/JakeSurge/CPSC4430-github-actions-lab/actions/workflows/test.yml/badge.svg)](https://github.com/JakeSurge/CPSC4430-github-actions-lab/actions/workflows/test.yml)
+
 This is a simple calculator web app implemented with `flask` and tested with `pytest`. It has unit tests which will be auto ran with Github Actions when pushing to `main` or pushing to a pull request which will be merged into `main`
 
 ## Getting Started
