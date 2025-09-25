@@ -11,6 +11,7 @@ def home():
         <a href="/add">Add</a>
         <a href="/subtract">Subtract</a>
         <a href="/multiply">Multiply</a>
+        <a href="/divide">Divide</a>
     </div>
     """
 
@@ -75,6 +76,29 @@ def multiply():
         a = int(request.args["a"])
         b = int(request.args["b"])
         page += f"<p>The product is {a*b}</p>"
+    except:
+        pass
+
+    return page
+
+
+# Get request for dividing
+@app.route("/divide")
+def divide():
+    page = """
+    <h1>Divide</h1>
+    <form action=/divide method=get>
+        <input name=a />
+        <input name=b />
+        <input type=submit />
+    </form>
+    <a href="/">Home</a>
+    """
+
+    try:
+        a = int(request.args["a"])
+        b = int(request.args["b"])
+        page += f"<p>The quotient is {a/b}</p>"
     except:
         pass
 
