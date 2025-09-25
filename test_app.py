@@ -30,3 +30,7 @@ def test_multiply(client):
     assert b"The product is 2" in response.data, "Multiplying page is not multiplying correctly"
 
 
+def test_divide(client):
+    response = client.get("/divide?a=1&b=2")
+
+    assert b"The quotient is 0.5" in response.data, "Dividing page is not dividing correctly"
