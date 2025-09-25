@@ -31,7 +31,7 @@ def add():
     try:
         a = int(request.args["a"])
         b = int(request.args["b"])
-        page += f"<p>The sum is {a+a}</p>"
+        page += f"<p>The sum is {a+b}</p>"
     except:
         pass
 
