@@ -31,8 +31,8 @@ python3 app.py
 
 ### Running Tests
 
-To run the unit tests against the app just use `pytest` to run the `test_app.py` file.
+To run the unit tests against the app just use `pytest`.
 
 ```
-pytest test_app.py
+pytest
 ```
